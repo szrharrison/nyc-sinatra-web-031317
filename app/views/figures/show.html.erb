@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Titles</th>
+    <th>Landmarks</th>
+  </tr>
+  <tr>
+    <td><%= @figure.name %></td>
+    <td><% @figure.titles.each do |title| %>
+      <%= title.name %>
+      <br>
+    <% end %></td>
+    <td><% @figure.landmarks.each do |landmark| %>
+      <%= landmark.name %>, created on <%= landmark.year_completed %>
+    <% end %></td>
+  </tr>
+<table>
